@@ -44,7 +44,12 @@ public class LoginActivity extends AppCompatActivity {
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putString("Email",Email);
                         editor.apply();
-                        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                        // Inside LoginActivity after successful login
+                        String loggedInUserEmail = Email; // Email obtained from EditText
+                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                        intent.putExtra("loggedInUserEmail", loggedInUserEmail);
+                        startActivity(intent);
+
                     }else {
                         Toast.makeText(getApplicationContext(), "Invalid Email or Password",Toast.LENGTH_SHORT).show();
 

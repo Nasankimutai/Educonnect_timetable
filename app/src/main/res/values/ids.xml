@@ -2,4 +2,5 @@
 <resources>
     <item name="login" type="id" />
     <item name="navigationButtonsGridLayout" type="id" />
+    <item name="notificationTextView" type="id" />
 </resources>

@@ -49,4 +49,8 @@ public class Database extends SQLiteOpenHelper {
         return result;
 
     }
+    public Cursor getUserFirstName(String email) {
+        SQLiteDatabase db = getReadableDatabase();
+        return db.rawQuery("SELECT First_name FROM users WHERE Email=?", new String[]{email});
+    }
 }
