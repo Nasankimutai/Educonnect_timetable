@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_intro" />
 
     <EditText
-        android:id="@+id/editTextConfirm_password"
+        android:id="@+id/editTextPassword"
         android:layout_width="290dp"
         android:layout_height="68dp"
         android:layout_marginTop="40dp"
@@ -103,7 +103,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.588"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextConfirm_password" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
     <TextView
         android:id="@+id/textview_new_account"

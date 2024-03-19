@@ -42,14 +42,17 @@ public class RegisterActivity extends AppCompatActivity {
                 String First_name = edFirst_name.getText().toString();
                 String Last_name = edLast_name.getText().toString();
                 String Email = edEmail.getText().toString();
-                String Password = edPassword.getText().toString();
+                String password = edPassword.getText().toString();
                 String Confirm_password = edConfirm_password.getText().toString();
-                if (First_name.isEmpty() || Last_name.isEmpty() || Email.isEmpty() || Password.isEmpty()
+                Database db = new Database(getApplicationContext(), "timetable", null, 1);
+
+                if (First_name.isEmpty() || Last_name.isEmpty() || Email.isEmpty() || password.isEmpty()
                         || Confirm_password.isEmpty() ){
                     Toast.makeText(getApplicationContext(), "please fill all details", Toast.LENGTH_SHORT).show();
                 } else
-                    if (Password.compareTo(Confirm_password)==0) {
-                        if (isValid(Password)){
+                    if (password.compareTo(Confirm_password)==0) {
+                        if (isValid(password)){
+                            db.create_account(First_name,Last_name,Email,password);
                             Toast.makeText(getApplicationContext(), "Record Inserted", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
 
