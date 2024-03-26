@@ -1,0 +1,51 @@
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/primaryWhite"
+    android:elevation="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="85dp"
+            android:layout_height="105dp"
+            android:id="@+id/iv_timetable"
+            android:layout_marginLeft="10dp"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_timetable"
+            android:text="Monday"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/iv_timetable"
+            android:textSize="24sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_description"
+            android:text="description"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_below="@id/tv_timetable"
+            android:layout_toRightOf="@id/iv_timetable"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_click"
+            android:text="click here"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:textSize="12dp"
+            android:layout_below="@id/tv_description"
+            android:layout_alignBottom="@id/iv_timetable"/>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

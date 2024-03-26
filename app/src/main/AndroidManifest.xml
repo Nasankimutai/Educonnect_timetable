@@ -6,12 +6,19 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
-        android:theme="@style/Theme.EduConnectApp"
+        android:theme="@style/Theme.Timetable"
         tools:targetApi="31">
+        <activity
+            android:name=".DayDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TimetableActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Timetable" />
         <activity
             android:name=".WhatsAppActivity"
             android:exported="false" />
@@ -20,11 +27,7 @@
             android:exported="false" />
         <activity
             android:name=".NotesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".TimetableActivity"
             android:exported="false" /> <!-- <activity -->
-
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
