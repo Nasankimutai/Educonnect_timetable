@@ -1,6 +1,7 @@
 package com.example.educonnectapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,6 +19,7 @@ import java.util.List;
 public class HomeActivity extends AppCompatActivity {
 
     TextView welcomeTextView;
+    Toolbar toolbar;
     ImageButton timetableButton, notesButton, subjectDetailsButton, whatsappButton;
     RecyclerView notificationsRecyclerView;
     NotificationAdapter notificationAdapter;
@@ -33,6 +35,7 @@ public class HomeActivity extends AppCompatActivity {
         db = new Database(this, "timetable", null, 1);
 
         welcomeTextView = findViewById(R.id.textView);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         timetableButton = findViewById(R.id.imageButton);
         notesButton = findViewById(R.id.imageButton4);
         subjectDetailsButton = findViewById(R.id.imageButton2);
@@ -77,14 +80,16 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         notifications = new ArrayList<>();
-        notifications.add("Notification 1");
-        notifications.add("Notification 2");
-        notifications.add("Notification 3");
+        notifications.add("There is an upcoming cat on Tuesday");
+        notifications.add("This weeks notes should be sent to students");
+        notifications.add("Assignments to be collected 12:00 Friday");
 
         // Initialize RecyclerView
         notificationAdapter = new NotificationAdapter(notifications);
         notificationsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         notificationsRecyclerView.setAdapter(notificationAdapter);
+
+        initToolbar();
     }
 
     // Function to get logged-in user's first name from the database
@@ -108,6 +113,10 @@ public class HomeActivity extends AppCompatActivity {
             Toast.makeText(this, "Cursor is null or empty", Toast.LENGTH_SHORT).show();
         }
         return firstName;
+    }
+    private void initToolbar(){
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Home");
     }
 
 

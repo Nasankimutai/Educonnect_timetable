@@ -47,7 +47,7 @@ public class TimetableActivity extends AppCompatActivity {
     }
     private void initToolbar(){
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Educonnect App");
+        getSupportActionBar().setTitle("Timetable");
     }
 
     private void setupListView(){

@@ -4,21 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primaryWhite"
+    android:background="@drawable/background"
     tools:context=".HomeActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryBlue"
+        app:titleTextColor="@color/primaryWhite"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="138dp"
         android:layout_height="62dp"
         android:text="@string/textview"
-        android:textColor="@color/primaryBlue"
+        android:textAlignment="textStart"
+        android:textColor="@color/primaryWhite"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/gridLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.014"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.432" />
+        app:layout_constraintVertical_bias="0.903" />
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
@@ -26,49 +38,49 @@
         android:layout_height="298dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.193"
-        tools:layout_editor_absoluteX="1dp"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintVertical_bias="0.286"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="4dp">
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="173dp"
-            android:layout_height="124dp"
+            android:layout_width="201.5dp"
+            android:layout_height="146dp"
             android:background="@color/white"
+            android:contentDescription="@string/image_btn1"
             app:layout_column="0"
             app:layout_row="0"
-            app:srcCompat="@drawable/timetable"
-            android:contentDescription="@string/image_btn1" />
+            app:srcCompat="@drawable/timetable" />
 
         <ImageButton
             android:id="@+id/imageButton4"
-            android:layout_width="175dp"
+            android:layout_width="201.5dp"
             android:layout_height="146dp"
             android:background="@color/white"
+            android:contentDescription="@string/image_btn2"
             app:layout_column="0"
             app:layout_row="1"
-            app:srcCompat="@drawable/notes"
-            android:contentDescription="@string/image_btn2" />
+            app:srcCompat="@drawable/notes" />
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="180dp"
-            android:layout_height="121dp"
+            android:layout_width="201.5dp"
+            android:layout_height="146dp"
             android:background="@color/white"
+            android:contentDescription="@string/image_btn3"
             app:layout_column="2"
             app:layout_row="0"
-            app:srcCompat="@drawable/unit"
-            android:contentDescription="@string/image_btn3" />
+            app:srcCompat="@drawable/unit" />
 
         <ImageButton
             android:id="@+id/imageButton5"
-            android:layout_width="178dp"
-            android:layout_height="144dp"
+            android:layout_width="201.5dp"
+            android:layout_height="146dp"
             android:background="@color/white"
+            android:contentDescription="@string/image_btn4"
             app:layout_column="2"
             app:layout_row="1"
-            app:srcCompat="@drawable/whatsapp"
-            android:contentDescription="@string/image_btn4" />
+            app:srcCompat="@drawable/whatsapp" />
     </androidx.gridlayout.widget.GridLayout>
 
     <androidx.recyclerview.widget.RecyclerView

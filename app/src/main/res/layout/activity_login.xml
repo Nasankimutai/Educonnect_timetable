@@ -7,16 +7,25 @@
     android:background="@drawable/background"
     tools:context=".LoginActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryBlue"
+        app:titleTextColor="@color/primaryWhite"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
     <ImageView
         android:id="@+id/imageView_icon"
         android:layout_width="100dp"
         android:layout_height="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.075"
         app:srcCompat="@drawable/icon" />
 
     <TextView
@@ -29,10 +38,10 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.644"
+        app:layout_constraintHorizontal_bias="0.613"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.17" />
+        app:layout_constraintVertical_bias="0.217" />
 
     <TextView
         android:id="@+id/textView_intro"
@@ -48,7 +57,7 @@
         app:layout_constraintHorizontal_bias="0.786"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_welcome"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
         app:textLocale="@string/lorem_ipsum" />
 
     <EditText
@@ -67,7 +76,7 @@
         android:textColorHint="@color/black"
         android:textColorLink="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintHorizontal_bias="0.605"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_intro" />
 
@@ -94,7 +103,7 @@
         android:id="@+id/buttonLogin"
         android:layout_width="270dp"
         android:layout_height="62dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="52dp"
         android:focusable="auto"
         android:text="@string/login"
         android:textColor="@color/white"
@@ -109,7 +118,7 @@
         android:id="@+id/textview_new_account"
         android:layout_width="218dp"
         android:layout_height="46dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:text="@string/create_new_account"
         android:textAlignment="center"
         android:textColor="#15891A"

@@ -1,6 +1,7 @@
 package com.example.educonnectapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -18,6 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText edEmail, edPassword;
     TextView tv;
     Button btn;
+    Toolbar toolbar;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         edEmail = findViewById(R.id.editTextEmailAddress);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         edPassword= findViewById(R.id.editTextPassword);
         btn = findViewById(R.id.buttonLogin);
         tv = findViewById(R.id.textview_new_account);
@@ -65,5 +68,11 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        initToolbar();
+
+    }
+    private void initToolbar(){
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Login");
     }
 }
